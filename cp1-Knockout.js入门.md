@@ -156,3 +156,6 @@ function ViewModel(name) {
 var myThirdViewModel = new ViewModel('Steve Kennedy');
 ```
 在示例 1-3 和 1-4中,　 ViewModel类被直接赋值给变量。这个示例有所不同的是，ViewModel就像一个类一样，用于创建一个接受name属性的函数。然后通过为构造函数传入name属性来对它进行实例化。
+
+
+在将来的示例中，我将会急需使用 JavaScript类，因为它提供了大量的灵活性，然而，如果一个简单的JavaScript变量或结构就满足你的视图，那就不觉得需要以类的形式来包装你的ViewModel。
