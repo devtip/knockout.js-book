@@ -1,4 +1,4 @@
-# Knockout.js入门
+# 第1章 Knockout.js入门
 > Knockout.js是一个开源的JavaScript库，它被构建为允许你创建动态和丰富的Web应用程序。它是基于 Model-View-ViewModel (MVVM) 模式进行构建的。 Knockout使得你实现一个响应用户交互的复杂用户界面变得非常简单。
 
 
