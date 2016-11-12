@@ -63,3 +63,24 @@ Knockout会处理视图和ViewModel。 视图中的所有数据绑定都将被Vi
 执行此函数时，Knockout会处理视图和ViewModel。 所有绑定到视图中的数据将会被执行并动态替换来自ViewModel中的数据。
 
 Knockout不会限制每个视图只有单个ViewModel。 大型项目或者类通常是因为重用性的原因设计精良，这也是将多个ViewModel绑定到单个视图的常见原因。 这将在第6章中进行更详细地讨论。
+
+
+## What Is MVVM
+MVVM模式大部分基于MVC模式，两者共享MV部分。 ViewModel是区分两者的关键。
+MVVM被设计为在 ViewModel与及View中实现数据绑定。这正是 KnockoutJS 为我们所作的，并且它做得很好。正如示例1-2，它是通过使用一些简单实现的(simple-to-implement)属性与及一个JavaScript ViewModel俩实现的。
+重点要记住的是，你应当以一种更为容易展现你的视图是如何使用数据的方式来构建ViewModel的时候
+我们在下面的例子中探讨几种常见的情况。
+
+
+
+## 创建一个ViewModel
+一个ViewModel可以是任何类型的JavaScript变量。在示例1-3中，我们以一个简单的JavaScript结构,开始，这个结构函数着单个name属性。
+
+Example 1-3. 基本的ViewModel
+``` js
+var myFirstViewModel = {
+ name: 'Steve Kennedy'
+};
+```
+
+上面的示例是一个完美的ViewModel场景，但通常情况下，一个数据模型并不像上面那样100%与之相关。通常，要给数据模型会将其分离为first name与last name两个单独的字段，以使得更为容易地编辑数据，然而，在一个视图中，将它们连接起来并以一个独立的字段来显示是更为有意义的。
