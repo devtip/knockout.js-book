@@ -27,7 +27,7 @@ Example 1-1. 使用HTML注释进行Knockout绑定
 Knockout最常用的功能之一是使用ViewModel来动态显示文本或者HTML。
 示例1-2展示了创建一个使用ViewModel来显示中name属性的标题。
 
-```
+``` html
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -85,7 +85,7 @@ var myFirstViewModel = {
 
 上面的示例是一个完美的ViewModel场景，但通常情况下，一个数据模型并不像上面那样100%与之相关。通常，要给数据模型会将其分离为first name与last name两个单独的字段，以使得更为容易地编辑数据，然而，在一个视图中，将它们连接起来并以一个独立的字段来显示是更为有意义的。
 
-上面的ViewModel是相关基础的。ViewModels are not limited to such a simple structure, as the next examples demonstrate.
+上面的ViewModel是相关基础的。ViewModels are not limited to such a simple structure, as the next 示例 demonstrate.
 
 ## 面向对象的ViewModels
 通常，当我创建ViewModels, 我创建一个简单的或者复杂的JavaScript类允许我利用一种面向对象编程风格(函数、属性、抽象等)。
@@ -135,3 +135,24 @@ alert(mySecondViewModel.getName()); // 访问getName函数
 ```
 
 上面所有的语句将会alert name。
+
+##　带有参数的ViewModel
+在示例示例 1-3 and 1-4, name属性的值被硬编码的，在大多数场景中，像这样的数据是通过不同的数据源进行填充的: 数据库、Ajax调用的结果等等。
+
+在示例1-6, name将会通过ViewModel的一个输入进行填充的。
+
+Example 1-6. 带有参数的ViewModel
+``` javascript
+function ViewModel(name) { 
+ var self = this; 
+ 
+ self.name = name; 
+ 
+ self.getName = function() { 
+ return self.name; 
+ }; 
+}; 
+
+var myThirdViewModel = new ViewModel('Steve Kennedy');
+```
+在示例 1-3 和 1-4中,　 ViewModel类被直接赋值给变量。这个示例有所不同的是，ViewModel就像一个类一样，用于创建一个接受name属性的函数。然后通过为构造函数传入name属性来对它进行实例化。
