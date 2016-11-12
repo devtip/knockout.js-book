@@ -92,13 +92,13 @@ var myFirstViewModel = {
 
 
 ### Tips: JavaScript的面向对象编程
-JavaScript is a fully object-oriented programming (OOP) language based on prototyping. It doesn’t contain class statements like C++, C#, or PHP; however, JavaScript functions can be used to simulate the same behavior.
-It also offers full support of OOP language features such as namespaces, objects, properties, inheritance, abstraction, etc.
-If you are new to JavaScript or object-oriented programming, the Mozilla Developer Network (MDN) offers a [great introductory article](http://mzl.la/1u0uge8).
+JavaScript是一门完整的基于原型的面向对象编程语言， 它不想C++, C#或者PHP那样有class语句，然而，JavaScript 函数可以通过模拟来达到相同的行为。
+它也提供了完整的OOP语言功能支持，比如命名空间、对象、属性、继承、抽象等等。
+如果你是JavaScript新手或者面向对象编程新手，Mozilla Developer Network (MDN)提供了一些[很好的文章](http://mzl.la/1u0uge8).
 
 在示例1-4中, 我创建一个基于一些面向对象特性的ViewModel，并以此为我们的视图提供更多的功能。
 
-Example 1-4. Object-Oriented ViewModel
+Example 1-4. 面向对象的ViewModel
 ```
 
 var SecondViewModel = function() {
