@@ -54,3 +54,12 @@ Knockout最常用的功能之一是使用ViewModel来动态显示文本或者HTM
 span标记通过数据绑定到tagViewModel中的name属性。这是通过在data-bind HTML属性中放置`text：name`来实现的。
 
 正如本章的介绍中提到的，实现一个Knockout应用需要三个不同的东西。 第一个是视图，在此示例中是包含h1与及标识数据绑定的span标记的HTML。 
+
+第二个是 ViewModel, 在此示例中是一个称之为viewModel 的包含着单个变量name的JavaScript 变量/函数。
+第三个是告诉Knockout在视图与及ViewModel之间执行数据绑定。这是通过调用一个带有View参数的ko.applyBindings方法来完成。
+
+Knockout会处理视图和ViewModel。 视图中的所有数据绑定都将被ViewModel中的数据执行并动态替换。
+
+执行此函数时，Knockout会处理视图和ViewModel。 所有绑定到视图中的数据将会被执行并动态替换来自ViewModel中的数据。
+
+Knockout不会限制每个视图只有单个ViewModel。 大型项目或者类通常是因为重用性的原因设计精良，这也是将多个ViewModel绑定到单个视图的常见原因。 这将在第6章中进行更详细地讨论。
