@@ -49,3 +49,8 @@ Knockout最常用的功能之一是使用ViewModel来动态显示文本或者HTM
 </body>
 </html>
 ```
+
+当在浏览器中执行这个示例，它将会在h1标记里面输出`Hello Steve Kennedy`。
+span标记通过数据绑定到tagViewModel中的name属性。这是通过在data-bind HTML属性中放置`text：name`来实现的。
+
+正如本章的介绍中提到的，实现一个Knockout应用需要三个不同的东西。 第一个是视图，在此示例中是包含h1与及标识数据绑定的span标记的HTML。 
