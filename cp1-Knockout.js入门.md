@@ -84,3 +84,54 @@ var myFirstViewModel = {
 ```
 
 上面的示例是一个完美的ViewModel场景，但通常情况下，一个数据模型并不像上面那样100%与之相关。通常，要给数据模型会将其分离为first name与last name两个单独的字段，以使得更为容易地编辑数据，然而，在一个视图中，将它们连接起来并以一个独立的字段来显示是更为有意义的。
+
+上面的ViewModel是相关基础的。ViewModels are not limited to such a simple structure, as the next examples demonstrate.
+
+## 面向对象的ViewModels
+通常，当我创建ViewModels, 我创建一个简单的或者复杂的JavaScript类允许我利用一种面向对象编程风格(函数、属性、抽象等)。
+
+
+### Tips: JavaScript的面向对象编程
+JavaScript is a fully object-oriented programming (OOP) language based on prototyping. It doesn’t contain class statements like C++, C#, or PHP; however, JavaScript functions can be used to simulate the same behavior.
+It also offers full support of OOP language features such as namespaces, objects, properties, inheritance, abstraction, etc.
+If you are new to JavaScript or object-oriented programming, the Mozilla Developer Network (MDN) offers a [great introductory article](http://mzl.la/1u0uge8).
+
+在示例1-4中, 我创建一个基于一些面向对象特性的ViewModel，并以此为我们的视图提供更多的功能。
+
+Example 1-4. Object-Oriented ViewModel
+```
+
+var SecondViewModel = function() {
+ var self = this;
+ 
+ self.name = 'Steve Kennedy';
+ 
+ self.getName = function() {
+ return self.name;
+ };
+};
+
+var mySecondViewModel = new SecondViewModel();
+```
+
+示例中，ViewModel是一个JavaScript函数，用于扮演OOP中的类。它包含一个与上一个示例中相同的name变量，但是这一次它被封装在我们的类中并扮演着一个类属性这样的角色
+我也添加一个新称之为getName函数以允许我访问name属性，而无需通过在代码中的其它地方直接访问类属性。
+
+
+### Tips: Self = This?
+你可能会想知道为什么我的类的第一行是`var self = this;`。 通过创建一个名为self的变量，并为其分配变量this，它为我在类中提供了一个属性，这样我可以在类方法内部使用它，并且可以更为地容易得引用其它方法或者属性。
+
+即使示例1-4和示例1-3之间的结果代码看起来完全不同，实际上，它们非常相似。 name属性可以通过任一示例完全相同的方式访问，如示例1-5所示。
+
+尽管这导致代码1-4 与代码1-3 看起来不一样，事实上，它们是非常相同的。name属性可以在任意示例中以相同的方式进行访问，如图示例1-5所示。
+
+Example 1-5. 访问name属性
+
+``` javascript
+alert(myFirstViewModel.name);
+ 
+alert(mySecondViewModel.name); // 访问name属性access the property name
+alert(mySecondViewModel.getName()); // 访问getName函数
+```
+
+上面所有的语句将会alert name。
