@@ -29,3 +29,21 @@ var ViewModel = function(){
 var viewModel = new ViewModel();
 ko.applyBindings(viewModel);
 ```
+
+除了name以斜体进行展示，运行Example 2-1将会输出与示例Example 1-2相同的结果，这是因为它周围的HTML标记所引起的。
+
+##绑定HTML属性、CSS类与及CSS Style
+
+Knockout几乎可以绑定任何HTML属性、CSS类或者CSS style。除了一次指定多个属性，这与text绑定、HTML绑定非常相似，一次指定多个属性是通过使用花括号进行包围来完成的，正如示例 2-2与2-3.
+
+[](ex2-2.png)
+
+以下示例将两个自定义样式添加到p标记。 注意style属性margin-bottom和padding-bottom是CamelCase风格的而不是连字符风格。
+通过在关闭的大括号之后放置逗号，我为p标签添加了第二个数据绑定。 这一次我设置了一个CSS类的myClass。添加HTML属性也是以类似的方式完成。 在示例2-3中，我们来要添加的id属性 。
+ 
+Example 2-3. Data-binding HTML attributes
+``` js
+<p data-bind="attr: { id: 'myCustomId' }">
+ This p tag has an id data bound to it.</p>
+```
+像示例2-2一样, 如果我想添加额外的HTML属性，我会在关闭的花括号之前放置一个花括号，然后添加额外的属性。
