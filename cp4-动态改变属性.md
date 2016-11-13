@@ -7,7 +7,7 @@ Knockout称这些属性为observable(可观察的)。当你定义一个变量或
 
 
 ## 定义一个Observable
-有3种不同类型的而又非常常用的observable。 第一个，如示例4-1所示的那样, 示一个observable变量。
+有3种不同类型的而又非常常用的observable。 第一个，如示例4-1所示的那样, 是一个observable变量。
 
 Example 4-1. 创建一个observable变量
 
