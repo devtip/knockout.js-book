@@ -56,3 +56,25 @@ Example 3-4. 使用with绑定的书籍详情
 </body>
 </html>
 ```
+
+
+在这个示例中，一个book对象包含着一些其它的属性，而不再是书籍清单，这个book对象传递给
+ViewModel构造函数并且应用与with绑定。
+不同于foreach绑定那样，HTML是不会重复的，这里只是显示单独一本书。
+
+相比之下，如示例3-5所示，如果你不使用with数据绑定，则可以使用以下HTML完成相同的结果。
+
+Example 3-5. 不使用with绑定的书籍详情页
+
+``` html
+ <div id="book"> 
+ <h1 data-bind="text: book.title"></h1> 
+ <h2>Published on <span data-bind="text: formatDate(book.publishedDate)">
+ </span></h2> 
+ <p data-bind="text: book.synposis"></p> 
+ </div>
+ ```
+
+当你不使用with绑定的时候，你煮哟搭配HMTL元素中的数据绑定使用的长变量路径，比如 `book.title`这样，另外一个不同支持在于格式日期函数不再需要使用`$parent`前缀， 因为这里并没有创建一个child context,它仍然是在root context里。
+
+在这样的情况下，使用with绑定是一个简单方便的解决方案，它可以避免在自属性变量重复这些前缀。
