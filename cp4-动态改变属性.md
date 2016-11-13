@@ -18,8 +18,6 @@ myObservable('Hello');
 alert(myObservable());
 ```
 
-To create an observable, assign the ko.observable function to the variable. A default
-value can be specified in the constructor of the call. Knockout then converts your
-variable into a function and tracks when the value changes, in order to notify the UI
-elements associated with the variable.
+要创建observable，你需要将ko.observable函数分配给变量。 可以在调用该构造函数的时候指定默认值。 Knockout然后转换你的变量为一个函数，并用于跟踪值的变动发生在什么时候，以便通知与变量相关联的UI元素。
+
 
