@@ -1,8 +1,8 @@
 # 第1章 Knockout.js入门
-> Knockout.js是一个开源的JavaScript库，它被构建为允许你创建动态和丰富的Web应用程序。它是基于 Model-View-ViewModel (MVVM) 模式进行构建的。 Knockout使得你实现一个响应用户交互的复杂用户界面变得非常简单。
+> Knockout.js是一个开源的JavaScript库，它被构建为允许你创建动态的富Web应用程序。它是基于 Model-View-ViewModel (MVVM) 模式进行构建的。 Knockout使得你实现一个响应用户交互的复杂用户界面变得非常简单。
 
 
-我喜欢Knockout，因为它是当今最轻量级的JavaScript库之一。它也不是试图要成为一个无所不包的框架。它提供单一目的：在ViewModle与及用户界面进行数据绑定。
+我喜欢Knockout，因为它是当今最轻量级的JavaScript库之一。它也不是试图要成为一个无所不包的框架。它提供单一目的：在ViewModle与及用户界面之间进行数据绑定。
 
 
 实现Knockout涉及三个不同的东西：一个包含着将要进行数据绑定的HTML和CSS元素的视图、一个包含绑定到视图中数据的ViewModel，与及告诉Knockout使用ViewModel对视图执行数据绑定。
@@ -13,7 +13,7 @@
 
 ##数据绑定语法
 数据绑定是通过将​添加一个名为data-bind的HTML属性到任何HTML元素来完成的，好让Knockout用ViewModel来替换这些信息。
-某些时候HTML标记不起作用，因此Knockout允许你为以HTML注释的方式进行数据绑定，正如示例1-1所示的那样。
+某些时候这对HTML标记是不起作用的，因此Knockout允许你为以HTML注释的方式进行数据绑定，正如示例1-1所示的那样。
 
 Example 1-1. 使用HTML注释进行Knockout绑定
 ``` html
@@ -25,7 +25,7 @@ Example 1-1. 使用HTML注释进行Knockout绑定
 
 ##数据绑定示例
 Knockout最常用的功能之一是使用ViewModel来动态显示文本或者HTML。
-示例1-2展示了创建一个使用ViewModel来显示中name属性的标题。
+示例1-2展示了创建一个显示ViewModel中name属性的标题。
 
 ``` html
 <!DOCTYPE html>
@@ -65,10 +65,12 @@ Knockout会处理视图和ViewModel。 视图中的所有数据绑定都将被Vi
 Knockout不会限制每个视图只有单个ViewModel。 大型项目或者类通常是因为重用性的原因设计精良，这也是将多个ViewModel绑定到单个视图的常见原因。 这将在第6章中进行更详细地讨论。
 
 
-## What Is MVVM
+## 什么是MVVM
 MVVM模式大部分基于MVC模式，两者共享MV部分。 ViewModel是区分两者的关键。
-MVVM被设计为在 ViewModel与及View中实现数据绑定。这正是 KnockoutJS 为我们所作的，并且它做得很好。正如示例1-2，它是通过使用一些简单实现的(simple-to-implement)属性与及一个JavaScript ViewModel俩实现的。
-重点要记住的是，你应当以一种更为容易展现你的视图是如何使用数据的方式来构建ViewModel的时候
+MVVM被设计为在 ViewModel与及View中实现数据绑定。这正是 KnockoutJS 为我们所作的，并且它做得很好。正如示例1-2，它是通过使用一些简单实现的(simple-to-implement)属性与及一个JavaScript ViewModel来实现的。
+
+
+要重点记住的是，你应当以一种更为容易展现视图是如何使用数据的方式来构建ViewModel。
 我们在下面的例子中探讨几种常见的情况。
 
 
@@ -85,10 +87,10 @@ var myFirstViewModel = {
 
 上面的示例是一个完美的ViewModel场景，但通常情况下，一个数据模型并不像上面那样100%与之相关。通常，要给数据模型会将其分离为first name与last name两个单独的字段，以使得更为容易地编辑数据，然而，在一个视图中，将它们连接起来并以一个独立的字段来显示是更为有意义的。
 
-上面的ViewModel是相关基础的。ViewModels are not limited to such a simple structure, as the next 示例 demonstrate.
+上面的ViewModel是相关基础的。ViewModels并不限制为这么一个简单的结构，正如下面的示例所示范的那样。
 
-## 面向对象的ViewModels
-通常，当我创建ViewModels, 我创建一个简单的或者复杂的JavaScript类允许我利用一种面向对象编程风格(函数、属性、抽象等)。
+## 面向对象的ViewModel
+通常，当我创建ViewModelde的时候, 我通常会创建一个简单的或者复杂的JavaScript类来允许我利用一种面向对象编程风格(函数、属性、抽象等)。
 
 
 ### Tips: JavaScript的面向对象编程
@@ -119,7 +121,7 @@ var mySecondViewModel = new SecondViewModel();
 
 
 ### Tips: Self = This?
-你可能会想知道为什么我的类的第一行是`var self = this;`。 通过创建一个名为self的变量，并为其分配变量this，它为我在类中提供了一个属性，这样我可以在类方法内部使用它，并且可以更为地容易得引用其它方法或者属性。
+你可能会想知道为什么我的类中第一行是`var self = this;`。 通过创建一个名为self的变量，并为其分配变量this，它为我在类中提供了一个属性，这样我可以在类方法内部使用它，并且可以更为地容易得引用其它方法或者属性。
 
 即使示例1-4和示例1-3之间的结果代码看起来完全不同，实际上，它们非常相似。 name属性可以通过任一示例完全相同的方式访问，如示例1-5所示。
 
