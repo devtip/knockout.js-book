@@ -50,7 +50,7 @@ Example 2-3. Data-binding HTML attributes
 
 
 ## 条件式数据绑定
-When you are defining a data bind, you might want to specify a condition that when your data contains a specific value, it outputs a different class name. This can be accomplished by placing conditional statements inside your data binding.
+当你定义一个数据绑定, you might want to specify a condition that when your data contains a specific value, it outputs a different class name. This can be accomplished by placing conditional statements inside your data binding.
 In Example 2-4, a button is created. The text data binding contains a conditional statement that when the id is 0, the button text will say “Create.” However, when the
 id is greater than 0, it will say “Update,” allowing the use of a single button tag that
 dynamically changes.
@@ -66,15 +66,12 @@ Example 2-4. Conditional data binding
 <body> 
  <button type="submit" data-bind="text: (id == 0) ? 'Create' : 'Update'"></button> 
 
- <script type='text/javascript' src='js/knockout-3.2.0.js'></script> 
+ <script src='js/knockout-3.2.0.js'></script> 
  <script> 
  var viewModel = function() { 
-
- var self = this; 
-
- self.id = 0; 
+	 var self = this; 
+	 self.id = 0; 
  }; 
-
  ko.applyBindings(viewModel); 
  </script>
 </body>
@@ -88,12 +85,9 @@ will change to say “Update.”
 
 
 ## 条件语句
-When you are defining a conditional statement in your data bind‐
-ing, brackets are not required; however, I find it to be much more
-readable. It helps identify where the conditional statement is.
+当你在数据绑定在定义一个条件语句，花括号并不是必须的; 然而，我发现这样可读性更高。它有助于标识出条件语句在哪里。
 
-Just like when using data bindings, conditional bindings can be accomplished by
-using a function instead of placing the condition inside the data binding, as shown in
+Just like when using data bindings, conditional bindings can be accomplished by using a function instead of placing the condition inside the data binding, as shown in
 Example 2-5.
 
 Example 2-5. Condition data binding with a function
