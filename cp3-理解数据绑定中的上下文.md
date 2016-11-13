@@ -75,6 +75,6 @@ Example 3-5. 不使用with绑定的书籍详情页
  </div>
  ```
 
-当你不使用with绑定的时候，你煮哟搭配HMTL元素中的数据绑定使用的长变量路径，比如 `book.title`这样，另外一个不同支持在于格式日期函数不再需要使用`$parent`前缀， 因为这里并没有创建一个child context,它仍然是在root context里。
+当你不使用with绑定的时候，你注意到HMTL元素中的数据绑定使用的长变量路径，比如 `book.title`这样，另外一个不同支持在于格式日期函数不再需要使用`$parent`前缀， 因为这里并没有创建一个child context,它仍然是在root context里。
 
 在这样的情况下，使用with绑定是一个简单方便的解决方案，它可以避免在自属性变量重复这些前缀。
