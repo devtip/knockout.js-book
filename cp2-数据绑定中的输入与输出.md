@@ -34,9 +34,9 @@ ko.applyBindings(viewModel);
 
 ##绑定HTML属性、CSS类与及CSS Style
 
-Knockout几乎可以绑定任何HTML属性、CSS类或者CSS style。除了一次指定多个属性，这与text绑定、HTML绑定非常相似，一次指定多个属性是通过使用花括号进行包围来完成的，正如示例 2-2与2-3.
+Knockout几乎可以绑定任何HTML属性、CSS类或者CSS style。除了一次指定多个属性，这与text绑定、HTML绑定非常相似，一次指定多个属性是通过使用花括号进行包围来完成的，正如示例 2-2与示例2-3所看到的那样。
 
-[](ex2-2.png)
+![](ex2-2.png)
 
 以下示例将两个自定义样式添加到p标记。 注意style属性margin-bottom和padding-bottom是CamelCase风格的而不是连字符风格。
 通过在关闭的大括号之后放置逗号，我为p标签添加了第二个数据绑定。 这一次我设置了一个CSS类的myClass。添加HTML属性也是以类似的方式完成。 在示例2-3中，我们来要添加的id属性 。
@@ -128,3 +128,4 @@ Example 2-5. Condition data binding with a function
 
 The ViewModel was updated in the example to add a new function called isNew. This contains the same conditional statement that was used in Example 2-4. The data binding was also updated to use the function inside of the condition statement.
 The id was updated from 0 to 1, so running this example outputs “Update” for the button text.
+
