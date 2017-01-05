@@ -2,7 +2,7 @@
 > Knockout.js是一个开源的JavaScript库，它被构建为允许你创建动态的富Web应用程序。它是基于 Model-View-ViewModel (MVVM) 模式进行构建的。 Knockout使得你实现一个响应用户交互的复杂用户界面变得非常简单。
 
 
-我喜欢Knockout，因为它是当今最轻量级的JavaScript库之一。它也不是试图要成为一个无所不包的框架。它提供单一目的：在ViewModle与及用户界面之间进行数据绑定。
+我喜欢Knockout，因为它是当今最轻量级的JavaScript库之一。它也不是试图要成为一个无所不包的框架。它提供单一目的：在ViewModel与及用户界面之间进行数据绑定。
 
 
 实现Knockout涉及三个不同的东西：一个包含着将要进行数据绑定的HTML和CSS元素的视图、一个包含绑定到视图中数据的ViewModel，与及告诉Knockout使用ViewModel对视图执行数据绑定。
